@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
     "build": "webpack"
   },
   "repository": {
@@ -19,6 +20,8 @@
   },
   "homepage": "https://github.com/topvirtualbox-github/restaurant-page#readme",
   "devDependencies": {
+    "css-loader": "^6.2.0",
+    "style-loader": "^3.2.1",
     "webpack": "^5.51.2",
     "webpack-cli": "^4.8.0"
   }
