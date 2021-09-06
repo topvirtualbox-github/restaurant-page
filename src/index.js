@@ -8,19 +8,13 @@ const renderSite = (() => {
 
     // ===== Header =====
     const header = document.createElement("header");
-    const title = document.createElement("h1");
-    title.textContent = "RESTAURANT";
-    header.append(title);
-
-    // ===== Nav =====
-    const nav = document.createElement("nav");
     const home = document.createElement("button");
     home.textContent = "HOME";
     const menu = document.createElement("button");
     menu.textContent = "MENU";
     const contact = document.createElement("button");
     contact.textContent = "CONTACT";
-    nav.append(home, menu, contact);
+    header.append(home, menu, contact);
 
     // ===== Main =====
     const main = document.createElement("main");
@@ -36,6 +30,12 @@ const renderSite = (() => {
 
     // Append everything to the body
     const body = document.querySelector("body");
-    body.append(header, nav, main, footer);
+    body.append(header, main, footer);
+
+    // Add event listeners
+    window.addEventListener("load", renderHome);
+    home.addEventListener("click", renderHome);
+    menu.addEventListener("click", renderMenu);
+    contact.addEventListener("click", renderContact);
 
 })();
